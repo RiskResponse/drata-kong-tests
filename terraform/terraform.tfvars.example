@@ -1,0 +1,24 @@
+# Drata Kong Tests - Terraform Variables
+# Copy to terraform.tfvars and fill in values
+
+project_id         = "drata-kong-tests"
+region             = "us-east1"
+job_name           = "drata-kong-tests"
+
+# Schedule: Daily at 6am UTC
+schedule           = "0 6 * * *"
+schedule_timezone  = "UTC"
+
+# Kong Configuration
+konnect_region     = "us"
+control_plane_name = "kong-hybrid-rate-limit-demo"
+dataplane_url      = "https://kong-dataplane-xxx.run.app"
+
+# API Keys
+free_trial_key     = "free-trial-key"
+pro_key            = "pro-key"
+
+# Secret names (must exist in Secret Manager)
+konnect_token_secret = "konnect-token"
+drata_api_key_secret = "drata-api-key"
+
